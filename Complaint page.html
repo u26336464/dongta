@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/Complaint page_style.css">
+    <title>Complaint page</title>
+
+  </head>
+<body>
+
+<div class = "pageWrapper" > 
+    <center>
+      <form method=post action="complaints.html">
+<input type="head" id="head" name="name" placeholder="제목을 입력하십시오"requied style="width:220pt;height:20pt;"></br>
+<input type="text" id="text" name="text" placeholder="500자 이하"maxlength="500" style="width:220pt;height:100pt;">
+</center>
+<tr>
+        </br> <th>이름</th></br>
+           <td class="s">
+               <input type="radio" name="chk_name" checked> 비공개
+               <input type="radio" name="chk_name" value="4"> 공개
+            </td>
+         </tr>
+         <input type="button" value="취소"onclick="location.href='Complaints.html'">
+         <input type="submit" value="완료">
+        </form>
+</div>
+
+  </body>
+</html>
+
+

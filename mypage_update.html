@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+   <title>마이페이지 수정</title>
+   <link rel="stylesheet" href="/stylesheets/mypage_update_style.css">
+</head>
+<body>
+   <div class ="pageWrapper">
+      <header>
+      <h1>마이페이지</h1>
+   </header>
+   <main>
+   <div class= "img"><img src="그루트.jpeg" width="100" height="100"></div>
+	<input type="button" name="btn1" value="수정">
+	<table width="940" style="padding:5px 0 5px 0; ">
+      <tr>
+         <th> 아이디</th>
+         <td>OOOOOO</td>
+      </tr>
+      
+      <tr>
+            <th>이름</th>
+            <td><input type='text' name='name'></td>
+         </tr>
+       <tr>
+         <th>비밀번호</th>
+         <td><p>******** <button>▶</button></p></td>
+       </tr>
+         <tr>
+           <th>학번</th>
+           <td><input type='text' name='grade'></td>
+        </tr>
+          
+         
+       <tr>
+         <th>성별</th>
+           <td class="s">
+               <input type="radio" name="chk_sex" checked> 여자
+               <input type="radio" name="chk_sex" value="4"> 남자
+ 	   <input type="radio" name="chk_sex" value="4"> 공개 안함
+            </td>
+         </tr>
+     </table>
+     </main>
+	 <input type="button" name="btn1" value="취소"onclick="location.href='mypage.html'">
+	 <input type="button" name="btn1" value="완료"onclick="location.href='mypage.html'">
+   </div>
+</body>
+</html>

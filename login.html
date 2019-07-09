@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/login_style.css" />
+	<title>Login</title>
+	<style>
+		#header {
+		height:100px;
+		}
+		#section {
+		width:200px;
+		padding:10px;
+		}
+		
+		#header { text-align:center; }
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$('#login').click(function(e){
+			if ($('#loginId').val()=="" ||
+                $('#loginPw').val()==""){
+				alert('아이디와 비밀번호를 기입해주세요.');
+				e.preventDefault();                      
+			} 
+			else{
+				location.href='homepage.html';  
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<div class="pageWrapper">
+<form method="post" id="authForm">
+<div id="header">
+	<h1 style = " font-size:4em;" class="mainLogo">GMMA</h1>
+</div>
+
+<div class = "main">
+ <div class = "name">
+	<label for="loginId">아이디&nbsp;&nbsp;&nbsp;</label> 
+	<input type="id" id="loginId" name="loginId" placeholder="아이디를 입력하십시오"maxlength="12" requied>
+	
+</div>
+<div class = "input">
+		<label for="loginPw">비밀번호</label> 
+		<input type="password" id="loginPw" name="password" placeholder="비밀번호를 입력하십시오" > 
+	  </div>
+</div>
+<footer>
+	<div class = "login"> <input type="button" id="login" name="login" style="width:220pt;height:40pt;" value="로그인"> </div>
+	<div class = "register"> <input type="button" name="btn2" value="회원가입"onclick="location.href='register.html'"> </div>
+</footer>
+
+</div>
+ </body>
+</html>
