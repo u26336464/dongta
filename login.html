@@ -1,60 +1,150 @@
-﻿<!DOCTYPE html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="/stylesheets/login_style.css" />
-	<title>Login</title>
-	<style>
-		#header {
-		height:100px;
-		}
-		#section {
-		width:200px;
-		padding:10px;
-		}
-		
-		#header { text-align:center; }
-
-	</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-	$(function(){
-		$('#login').click(function(e){
-			if ($('#loginId').val()=="" ||
-                $('#loginPw').val()==""){
-				alert('아이디와 비밀번호를 기입해주세요.');
-				e.preventDefault();                      
-			} 
-			else{
-				location.href='homepage.html';  
-			}
-		});
-	});
-</script>
-</head>
-<body>
-<div class="pageWrapper">
-<form method="post" id="authForm">
-<div id="header">
-	<h1 style = " font-size:4em;" class="mainLogo">GMMA</h1>
-</div>
-
-<div class = "main">
- <div class = "name">
-	<label for="loginId">아이디&nbsp;&nbsp;&nbsp;</label> 
-	<input type="id" id="loginId" name="loginId" placeholder="아이디를 입력하십시오"maxlength="12" requied>
-	
-</div>
-<div class = "input">
-		<label for="loginPw">비밀번호</label> 
-		<input type="password" id="loginPw" name="password" placeholder="비밀번호를 입력하십시오" > 
-	  </div>
-</div>
-<footer>
-	<div class = "login"> <input type="button" id="login" name="login" style="width:220pt;height:40pt;" value="로그인"> </div>
-	<div class = "register"> <input type="button" name="btn2" value="회원가입"onclick="location.href='register.html'"> </div>
-</footer>
-
-</div>
- </body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>동태나라:대문</title>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+    
+    <body>
+        <!-- header start -->
+        <div id="header" class="section">
+            <img alt="" class="img-circle" src="https://code.sololearn.com/Icons/Avatars/0.jpg">
+            <p>동태</p>
+        </div>
+        <!-- header end -->
+        
+        <!-- About Me section start -->
+        <div class="section">
+            <h1><span>About Me</span></h1>
+            <p>
+                힘세고 강한 아침.누구냐고 묻는다면 나는<strong>동태</strong>.
+            </p>
+            <p class="quote">"동태복음 1장1절"</p>
+        </div>
+        <!-- About Me section end -->
+        
+        <!-- My Schedule section start -->
+        <div class="section">
+            <h1><span>My Coding Schedule</span></h1>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                </tr>
+                <tr>
+                    <td>8-8:30</td>
+                    <td class="selected">휴식</td>
+                    <td class="selected">휴식</td>
+                    <td class="selected">휴식</td>
+                    <td class="selected">휴식</td>
+                    <td class="selected">휴식</td>
+                </tr>
+                <tr>
+                    <td>9-10</td>
+                    <td class="selected">취침</td>
+                    <td class="selected">취침</td>
+                    <td class="selected">취침</td>
+                    <td class="selected">취침</td>
+                    <td class="selected">취침</td>
+                </tr>
+                <tr>
+                    <td>1-1:30</td>
+                    <td class="selected">여가</td>
+                    <td class="selected">여가</td>
+                    <td class="selected">여가</td>
+                    <td class="selected">여가</td>
+                    <td class="selected">여가</td>
+                </tr>
+                <tr>
+                    <td>3:45-5</td>
+                    <td class="selected">숙면</td>
+                    <td class="selected">숙면</td>
+                    <td class="selected">숙면</td>
+                    <td class="selected">숙면</td>
+                    <td class="selected">숙면</td>
+                </tr>
+                <tr>
+                    <td>6-6:15</td>
+                    <td class="selected">게임</td>
+                    <td class="selected">게임</td>
+                    <td class="selected">게임</td>
+                    <td class="selected">게임</td>
+                    <td class="selected">게임</td>
+                </tr>
+            </table>
+        </div>
+        <!-- My Schedule section end -->
+        
+        
+        <!-- My Skills section start -->
+        <div class="section">
+            <h1><span>My Skills</span></h1>
+            <ul>
+                <li>취침<br />
+                    <progress min="0" max="100" value="80"></progress>
+                </li>
+                <li>여가 <br />
+                    <progress min="0" max="100" value="50"></progress>
+                </li>
+                <li>게임 <br />
+                    <progress min="0" max="100" value="30"></progress>
+                </li>
+            </ul>
+        </div>
+        <!-- My Skills section end -->
+        
+        
+         <!-- Media section start -->
+        <div class="section">
+            <h1><span>My Media</span></h1>
+            <iframe height="300" width="700" src="https://u536522.github.io/dongta/index1.html" allowfullscreen frameborder="0"></iframe>
+        </div>
+        <!-- Media section end -->
+        
+        <!-- Form section start -->
+       <div class="section">
+            <h1><span>Contact Me</span></h1>
+            
+            <svg class="face" height="100" width="100">
+                <circle cx="50" cy="50" r="50" fill="#FDD835"/>
+                <circle cx="30" cy="30" r="10" fill="#FFFFFF"/>
+                <circle cx="70" cy="30" r="10" fill="#FFFFFF"/>
+                <circle cx="30" cy="30" r="5" fill="#000000"/>
+                <circle cx="70" cy="30" r="5" fill="#000000"/>
+                <path d="M 30 70 q 20 20 40 0" stroke="#FFFFFF" stroke-width="5" fill="none" />
+            </svg>
+                 
+            <form>
+                <input name="name" placeholder="Name" type="text" required /><br/>
+                <input name="email" placeholder="Email" type="email" required /><br/>
+                <textarea name="message" placeholder="Message" required ></textarea>
+                <input type="submit" value="SEND" class="submit" />
+            </form>
+        </div>
+        <!-- Form section end -->
+        
+        <!-- Contacts section start -->
+        <div class="section" id="contacts">
+            <h1><span>Follow Me</span></h1>
+            <div>
+                <a href="#" target="_blank">
+                    <img alt="SoloLearn" src="https://www.sololearn.com/Uploads/icons/sololearn.png" />
+                </a>
+                <a href="#">
+                    <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png"/>
+                </a>
+                <a href="#">
+                    <img alt="Twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" />
+                </a>
+            </div>
+        </div>
+    
+        
+        
+        
+    </body>
 </html>
